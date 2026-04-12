@@ -88,6 +88,5 @@ function toggleLanguage() {
 
 (function() {
   var stored = localStorage.getItem('onward-lang');
-  var browserLang = navigator.language && navigator.language.startsWith('zh') ? 'zh-CN' : 'en';
-  setLanguage(stored || browserLang);
+  setLanguage(stored || 'en');
 })();
