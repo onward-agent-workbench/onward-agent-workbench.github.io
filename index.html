@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- SPDX-FileCopyrightText: 2026 OPPO -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onward Agent Workbench — Agent First. Editor Last.</title>
+  <meta name="description" content="Onward Agent Workbench is an open-source desktop workspace where AI agents write code in parallel — and you lead the team.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Onward Agent Workbench">
+  <meta property="og:description" content="Agent first. Editor last. The desktop workspace where AI agents write code in parallel — and you lead the team.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="/" class="nav-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#7c3aed"/>
+              <stop offset="100%" style="stop-color:#c084fc"/>
+            </linearGradient>
+            <linearGradient id="logo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#16162a"/>
+              <stop offset="100%" style="stop-color:#0a0a10"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(50 50) scale(0.8046875)">
+            <rect width="512" height="512" rx="108" ry="108" fill="url(#logo-bg)"/>
+            <g>
+              <path d="M 80 120 Q 200 120, 280 200 Q 340 260, 400 256" fill="none" stroke="url(#logo-grad)" stroke-width="12" stroke-linecap="round" opacity="0.6"/>
+              <path d="M 80 190 Q 180 190, 260 220 Q 340 250, 400 256" fill="none" stroke="url(#logo-grad)" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+              <path d="M 80 256 L 400 256" fill="none" stroke="url(#logo-grad)" stroke-width="16" stroke-linecap="round"/>
+              <path d="M 80 322 Q 180 322, 260 292 Q 340 262, 400 256" fill="none" stroke="url(#logo-grad)" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+              <path d="M 80 392 Q 200 392, 280 312 Q 340 252, 400 256" fill="none" stroke="url(#logo-grad)" stroke-width="12" stroke-linecap="round" opacity="0.6"/>
+            </g>
+            <g>
+              <circle cx="400" cy="256" r="24" fill="#c084fc"/>
+              <circle cx="400" cy="256" r="12" fill="#ffffff" opacity="0.6"/>
+            </g>
+            <path d="M 430 256 L 470 256 M 455 235 L 475 256 L 455 277" fill="none" stroke="#c084fc" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+            <g fill="#a855f7">
+              <circle cx="80" cy="120" r="10" opacity="0.6"/>
+              <circle cx="80" cy="190" r="10" opacity="0.8"/>
+              <circle cx="80" cy="256" r="12"/>
+              <circle cx="80" cy="322" r="10" opacity="0.8"/>
+              <circle cx="80" cy="392" r="10" opacity="0.6"/>
+            </g>
+          </g>
+        </svg>
+        <span>Onward Agent Workbench</span>
+      </a>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()">中文</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge" data-i18n="hero.badge">OPPO Research Open Source Project</span>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title.line1">Agent first.</span><br>
+          <span class="hero-title-dim" data-i18n="hero.title.line2">Editor last.</span>
+        </h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">The desktop workspace where AI agents write code in parallel — and you lead the team.</p>
+        <p class="hero-provided" data-i18n="hero.provided">Provided by OPPO Research</p>
+        <div class="hero-ctas">
+          <a href="https://github.com/OPPO-PersonalAI/Onward-Agent-Workbench" class="btn-primary" target="_blank" rel="noopener" data-i18n="hero.cta.github">View on GitHub</a>
+          <a href="https://github.com/OPPO-PersonalAI/Onward-Agent-Workbench/releases" class="btn-secondary" target="_blank" rel="noopener" data-i18n="hero.cta.download">Download</a>
+        </div>
+        <div class="hero-platforms">
+          <span class="platform-tag">macOS</span>
+          <span class="platform-tag">Windows</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY + SCREENSHOT: Overview -->
+  <section class="showcase-section">
+    <div class="showcase-inner">
+      <div class="showcase-header animate-on-scroll">
+        <h2 class="showcase-label" data-i18n="philosophy.label">Why onward?</h2>
+        <p class="showcase-statement" data-i18n="philosophy.statement">Traditional IDEs are editor first — you type, the AI assists. Onward flips this around. Agents do the coding. You plan the work, dispatch prompts, and review what they built.</p>
+      </div>
+      <div class="showcase-image animate-on-scroll">
+        <img src="assets/screenshot-overview.png" alt="Onward Agent Workbench — multi-agent parallel workspace" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="features-inner">
+      <div class="feature-row animate-on-scroll">
+        <div class="feature-number">01</div>
+        <div class="feature-body">
+          <h3 class="feature-title" data-i18n="features.prompt.title">Prompt Manager — Your Command Center</h3>
+          <p class="feature-desc" data-i18n="features.prompt.desc">Write and arrange prompts before dispatching — plan work like a backlog. Schedule execution, color-tag priorities, and dispatch to agents as they become idle. Manage "what to do" separately from "who does it."</p>
+        </div>
+      </div>
+      <div class="feature-row animate-on-scroll">
+        <div class="feature-number">02</div>
+        <div class="feature-body">
+          <h3 class="feature-title" data-i18n="features.agents.title">Multi-Agent Parallel Execution</h3>
+          <p class="feature-desc" data-i18n="features.agents.desc">Run multiple AI agents side-by-side with configurable grid layouts. Broadcast dispatch to selected agents simultaneously. Each agent gets its own working directory, context, and history. Works with any CLI agent — Claude Code, Codex, or your custom toolchain.</p>
+        </div>
+      </div>
+      <div class="feature-row animate-on-scroll">
+        <div class="feature-number">03</div>
+        <div class="feature-body">
+          <h3 class="feature-title" data-i18n="features.editor.title">Task-Level Full Editor</h3>
+          <p class="feature-desc" data-i18n="features.editor.desc">After agents finish writing code, you review what changed. Each task gets a Monaco-powered editor with Git Diff viewer, Git History, global search, and Markdown preview. One workspace per task — complete visibility into what every agent did.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOT: Editor -->
+  <section class="showcase-section showcase-section--alt">
+    <div class="showcase-inner">
+      <div class="showcase-header animate-on-scroll">
+        <h2 class="showcase-label" data-i18n="editor.label">Review with Precision</h2>
+        <p class="showcase-statement" data-i18n="editor.statement">The editor is there when you need it — not as the starting point. Git Diff, commit history, and code editing in one integrated view per task.</p>
+      </div>
+      <div class="showcase-image animate-on-scroll">
+        <img src="assets/screenshot-editor.png" alt="Onward Agent Workbench — task-level editor with Git Diff" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- SEE IT IN ACTION: Video -->
+  <section class="video-section">
+    <div class="video-inner">
+      <div class="video-header animate-on-scroll">
+        <h2 class="showcase-label" data-i18n="video.label">See It in Action</h2>
+        <p class="showcase-statement" data-i18n="video.statement">Watch a real workflow: dispatching prompts to multiple agents, monitoring progress, and reviewing the results.</p>
+      </div>
+      <div class="video-frame animate-on-scroll">
+        <div class="video-titlebar">
+          <div class="dot dot--red"></div>
+          <div class="dot dot--yellow"></div>
+          <div class="dot dot--green"></div>
+          <span class="video-titlebar-text">Onward Agent Workbench</span>
+        </div>
+        <div class="video-body" id="heroVideo" onclick="playVideo(this)">
+          <video muted loop playsinline preload="metadata" src="https://raw.githubusercontent.com/OPPO-PersonalAI/Onward-Agent-Workbench/master/docs/assets/onward-demo.mp4"></video>
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="5,3 19,12 5,21"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALLATION -->
+  <section class="install-section">
+    <div class="install-inner">
+      <div class="install-header animate-on-scroll">
+        <h2 class="showcase-label" data-i18n="install.label">Installation</h2>
+        <p class="install-desc" data-i18n="install.statement">Download the latest release from GitHub for your platform.</p>
+        <a href="https://github.com/OPPO-PersonalAI/Onward-Agent-Workbench/releases" class="install-link" target="_blank" rel="noopener">github.com/OPPO-PersonalAI/Onward-Agent-Workbench/releases</a>
+      </div>
+      <div class="install-platforms animate-on-scroll">
+        <div class="install-platform">
+          <span class="install-platform-name">macOS</span>
+          <span class="install-platform-format">.dmg, .zip</span>
+        </div>
+        <div class="install-platform">
+          <span class="install-platform-name">Windows</span>
+          <span class="install-platform-format">.exe (NSIS), .zip</span>
+        </div>
+      </div>
+      <div class="install-note animate-on-scroll">
+        <div class="install-note-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        </div>
+        <div class="install-note-body">
+          <strong data-i18n="install.note.title">macOS: Unsigned App</strong>
+          <span data-i18n="install.note.desc">Onward is not code-signed. macOS Gatekeeper will block it on first launch. Go to System Settings → Privacy & Security → click "Open Anyway", or run:</span>
+          <code>xattr -cr "/Applications/Onward 2.app"</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+          <defs>
+            <linearGradient id="footer-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#7c3aed"/>
+              <stop offset="100%" style="stop-color:#c084fc"/>
+            </linearGradient>
+            <linearGradient id="footer-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#16162a"/>
+              <stop offset="100%" style="stop-color:#0a0a10"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(50 50) scale(0.8046875)">
+            <rect width="512" height="512" rx="108" ry="108" fill="url(#footer-bg)"/>
+            <path d="M 80 256 L 400 256" fill="none" stroke="url(#footer-grad)" stroke-width="16" stroke-linecap="round"/>
+            <circle cx="400" cy="256" r="20" fill="#c084fc"/>
+          </g>
+        </svg>
+        <span class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 OPPO. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/OPPO-PersonalAI/Onward-Agent-Workbench" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/OPPO-PersonalAI/Onward-Agent-Workbench/releases" target="_blank" rel="noopener" data-i18n="footer.releases">Releases</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

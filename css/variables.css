@@ -1,0 +1,37 @@
+/* SPDX-FileCopyrightText: 2026 OPPO */
+/* SPDX-License-Identifier: Apache-2.0 */
+
+:root {
+  /* Amethyst theme — from Onward Agent Workbench */
+  --bg-0: #110f15;
+  --bg-1: #17141e;
+  --bg-2: #1e1b28;
+  --panel: #24202f;
+  --border: #302b3c;
+  --border-strong: #3c3648;
+  --text-1: #eae6f0;
+  --text-2: #c0b8cc;
+  --text-3: #918aa0;
+  --accent: #a855f7;
+  --accent-strong: #9333ea;
+  --shadow-1: 0 6px 18px rgba(0, 0, 0, 0.38);
+
+  /* Semantic */
+  --success: #22c55e;
+
+  /* Gradients */
+  --gradient-purple: linear-gradient(135deg, #c084fc, #7c3aed);
+  --gradient-glow: radial-gradient(ellipse at 50% 0%, rgba(168, 85, 247, 0.12) 0%, transparent 60%);
+
+  /* Typography */
+  --font-sans: 'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', 'Cascadia Code', monospace;
+
+  /* Spacing & Layout */
+  --content-max: 1200px;
+  --section-gap: 72px;
+  --header-height: 64px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+}

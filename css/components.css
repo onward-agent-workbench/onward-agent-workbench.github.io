@@ -1,0 +1,109 @@
+/* SPDX-FileCopyrightText: 2026 OPPO */
+/* SPDX-License-Identifier: Apache-2.0 */
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--gradient-purple);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--text-1);
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  background: rgba(168, 85, 247, 0.06);
+  color: var(--text-1);
+}
+
+/* ===== LANGUAGE TOGGLE ===== */
+.lang-toggle {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-toggle:hover {
+  color: var(--text-1);
+  border-color: var(--border-strong);
+}
+
+/* ===== VIDEO PLAY BUTTON ===== */
+.video-body {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.1);
+  border: 2px solid rgba(168, 85, 247, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.video-play-btn:hover {
+  background: rgba(168, 85, 247, 0.18);
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.video-play-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--accent);
+  margin-left: 4px;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
